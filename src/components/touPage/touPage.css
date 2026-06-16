@@ -1,0 +1,178 @@
+.gbc-tou-page-wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.gbc-tou-document-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+}
+
+.document-main-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+.document-subtitle-container {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 25px;
+}
+
+.document-subtitle-date {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0 0 8px 0;
+  color: #000000;
+}
+
+.document-subtitle-version {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0;
+  color: #000000;
+}
+
+.document-body {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.document-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  color: #000000;
+}
+
+.section-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.standard-paragraph {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+  color: #000000;
+}
+
+.bullet-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-left: 20px;
+}
+
+.bullet-dot {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.bullet-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.contact-info-line {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  color: #000000;
+}
+
+@media (max-width: 992px) {
+  .gbc-tou-page-wrapper {
+    padding: 40px 30px;
+  }
+  
+  .document-main-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .document-subtitle-date,
+  .document-subtitle-version {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .standard-paragraph,
+  .bullet-text,
+  .contact-info-line {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gbc-tou-page-wrapper {
+    padding: 30px 15px;
+  }
+  
+  .document-main-title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 25px;
+  }
+  
+  .document-subtitle-date,
+  .document-subtitle-version {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .document-subtitle-container {
+    margin-bottom: 30px;
+  }
+}

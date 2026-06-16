@@ -1,0 +1,107 @@
+.gbc-category-page {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+.category-page-header {
+  padding: 40px 70px 10px 70px;
+  background-color: #FFFFFF;
+}
+
+.category-title-main {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gbc-dark, #121212);
+  margin: 0 0 15px 0;
+  letter-spacing: -0.5px;
+}
+
+.category-title-underline {
+  width: 80px;
+  height: 6px;
+  background-color: var(--gbc-primary, #222DFF);
+  border-radius: 3px;
+}
+
+/* Vertical image aspect-ratio support for rotated layers */
+.vertical-image-wrapper {
+  aspect-ratio: 220 / 438 !important;
+}
+
+/* Error page styles */
+.error-page {
+  padding: 100px 70px;
+  text-align: center;
+  font-family: var(--font-inter);
+}
+
+.error-title {
+  font-size: 36px;
+  color: var(--gbc-red, #FF0000);
+  margin-bottom: 20px;
+}
+
+.error-desc {
+  font-size: 18px;
+  color: var(--gbc-text-muted, #666666);
+}
+
+@media (max-width: 1200px) {
+  .category-page-header {
+    padding: 30px 40px 10px 40px;
+  }
+}
+
+.category-subnav-bar {
+  background: transparent;
+  width: 100%;
+  height: 55px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.category-subnav-container {
+  background-color: var(--gbc-primary, #222DFF);
+  border-radius: 0px 0px 20px 20px;
+  height: 55px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 2vw, 30px);
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.category-subnav-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.category-subnav-link {
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.category-subnav-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 1px #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+  .category-subnav-container {
+    padding: 0 40px;
+  }
+}
+

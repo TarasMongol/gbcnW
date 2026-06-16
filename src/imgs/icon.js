@@ -1,0 +1,1 @@
+export {default as iconMedusa} from './medusa.png';
