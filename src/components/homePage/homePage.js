@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { newsData } from './data';
 import './homePage.css';
 import {
   section1Data,
@@ -20,7 +19,6 @@ import {
 } from './homePageData';
 
 export default function HomePage() {
-
   return (
     <div className="gbc-homepage">
       <section className="gbc-sec gbc-sec-1">

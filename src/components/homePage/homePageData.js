@@ -475,3 +475,32 @@ export const section14Data = [
     text_first: false
   }
 ];
+
+export const termsData = [
+  {
+    id: "hello",
+    title: "1. Hello",
+    content: [
+      "These are GBC.com's Terms of Use (\"Terms\"). These Terms explain:",
+      "• The rules for using our Services (as defined below);",
+      "• What you can do with our Content (as defined below);"
+      // ... весь ваш остальной массив данных
+    ]
+  },
+  {
+    id: "applicability",
+    title: "2. When These Terms Apply",
+    content: [
+      "These Terms apply whenever you access, browse, register for, interact with, or otherwise use any GBC Service."
+    ]
+  },
+  // ... и так далее до самого конца
+  {
+    id: "contact",
+    title: "12. Contact Information",
+    content: [
+      "Global Broadcasting Corporation (GBC)",
+      "Email: support@gbc-news.com"
+    ]
+  }
+];
