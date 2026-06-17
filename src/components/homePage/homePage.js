@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from 'react';
+import { newsData } from './data';
 import './homePage.css';
 import {
   section1Data,
@@ -18,11 +20,12 @@ import {
 } from './homePageData';
 
 export default function HomePage() {
+
   return (
     <div className="gbc-homepage">
-            <section className="gbc-sec gbc-sec-1">
+      <section className="gbc-sec gbc-sec-1">
         <div className="sec-1-grid">
-                    <div className="sec-1-left-col">
+          <div className="sec-1-left-col">
             {section1Data.left_column.map((card, idx) => (
               <div key={idx} className="news-card card-hover-effect">
                 <div className="card-image-wrapper">
@@ -37,7 +40,7 @@ export default function HomePage() {
             ))}
           </div>
 
-                    <div className="sec-1-featured">
+          <div className="sec-1-featured">
             <div className="news-card featured-card card-hover-effect">
               <div className="card-image-wrapper featured-img-wrapper">
                 <img src={section1Data.featured.img} alt={section1Data.featured.title} className="card-img" />
@@ -50,7 +53,7 @@ export default function HomePage() {
             </div>
           </div>
 
-                    <div className="sec-1-right-col">
+          <div className="sec-1-right-col">
             {section1Data.right_column.map((card, idx) => (
               <div key={idx} className="compact-news-item">
                 <h4 className="compact-title">{card.title}</h4>
@@ -62,7 +65,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-2">
+      <section className="gbc-sec gbc-sec-2">
         <div className="sec-header">
           <h2 className="sec-heading">ONLY FROM THE GBC</h2>
           <div className="sec-header-line"></div>
@@ -83,7 +86,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-audio">
+      <section className="gbc-sec gbc-sec-audio">
         <div className="sec-header">
           <h2 className="sec-heading audio-heading">
             <svg className="audio-play-symbol" viewBox="0 0 24 24" fill="#FF0000">
@@ -116,7 +119,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-4">
+      <section className="gbc-sec gbc-sec-4">
         <div className="sec-4-grid-top">
           {section4Data.top_row.map((card, idx) => (
             <div key={idx} className={`news-card card-hover-effect ${idx === 1 ? 'span-two-cols' : ''}`}>
@@ -147,7 +150,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-5">
+      <section className="gbc-sec gbc-sec-5">
         <div className="five-col-grid">
           {section5Data.map((card, idx) => (
             <div key={idx} className="news-card card-hover-effect">
@@ -164,9 +167,9 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-6">
+      <section className="gbc-sec gbc-sec-6">
         <div className="sec-6-grid">
-                    <div className="sec-6-left">
+          <div className="sec-6-left">
             <div className="news-card featured-card card-hover-effect">
               <div className="card-image-wrapper large-img-wrapper">
                 <img src={section6Data.left_featured.img} alt={section6Data.left_featured.title} className="card-img" />
@@ -179,7 +182,7 @@ export default function HomePage() {
             </div>
           </div>
 
-                    <div className="sec-6-right">
+          <div className="sec-6-right">
             {section6Data.right_column.map((card, idx) => (
               <div key={idx} className="news-card card-hover-effect">
                 <div className="card-image-wrapper">
@@ -196,7 +199,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-7">
+      <section className="gbc-sec gbc-sec-7">
         <div className="featured-full-layout bg-light-gray">
           <div className="layout-content">
             <h2 className="featured-layout-title">{section7Data.title}</h2>
@@ -212,7 +215,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-8">
+      <section className="gbc-sec gbc-sec-8">
         <div className="three-col-grid">
           {section8Data.map((card, idx) => (
             <div key={idx} className="news-card card-hover-effect">
@@ -229,7 +232,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-media">
+      <section className="gbc-sec gbc-sec-media">
         <div className="media-library-header-container">
           <div className="media-library-pill">
             <span className="live-dot"></span>
@@ -253,7 +256,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-10">
+      <section className="gbc-sec gbc-sec-10">
         <div className="six-col-grid">
           {section10Data.map((card, idx) => (
             <div key={idx} className="news-card card-hover-effect">
@@ -270,7 +273,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-11">
+      <section className="gbc-sec gbc-sec-11">
         <div className="four-col-grid">
           {section11Data.map((card, idx) => (
             <div key={idx} className="news-card card-hover-effect">
@@ -287,7 +290,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-12">
+      <section className="gbc-sec gbc-sec-12">
         <h2 className="centered-showcase-title">Global Defense News</h2>
         <div className="featured-full-layout bg-light-blue reverse-layout">
           <div className="layout-content">
@@ -304,7 +307,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-13">
+      <section className="gbc-sec gbc-sec-13">
         <div className="four-col-grid">
           {section13Data.map((card, idx) => (
             <div key={idx} className="news-card card-hover-effect">
@@ -322,7 +325,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            <section className="gbc-sec gbc-sec-14">
+      <section className="gbc-sec gbc-sec-14">
         <div className="four-col-grid">
           {section14Data.map((card, idx) => (
             <div key={idx} className={`news-card card-hover-effect staggered-card ${card.text_first ? 'text-first' : 'image-first'}`}>
