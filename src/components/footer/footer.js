@@ -23,7 +23,7 @@ export default function Footer() {
   ];
 
   const legalLinks = [
-    { name: 'Terms of Use', path: '/terms' },
+    { name: 'Terms of Use', path: '/tou', isRouterLink: true },
     { name: 'Subscription Terms', path: '/gbc-st', isRouterLink: true },
     { name: 'About the BBC', path: '/about' },
     { name: 'Privacy Policy', path: '/privacy' },

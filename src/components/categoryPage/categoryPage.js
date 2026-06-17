@@ -1,13 +1,14 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import '../homePage/homePage.css';
 import './categoryPage.css';
-import { categoryPagesData, resolveImage } from './categoryPageData';
+import { categoryPagesData, subCategoryPagesData, resolveImage } from './categoryPageData';
 
 export default function CategoryPage() {
+  const [activeSub, setActiveSub] = useState(null);
   const location = useLocation();
   const path = location.pathname.substring(1);
-  
   const categoryData = categoryPagesData[path];
 
   if (!categoryData) {
@@ -18,29 +19,41 @@ export default function CategoryPage() {
       </div>
     );
   }
-
+  const currentSections = activeSub && subCategoryPagesData[activeSub]
+    ? subCategoryPagesData[activeSub].sections
+    : categoryData.sections;
   return (
     <div className="gbc-category-page">
 
       {categoryData.subCategories && categoryData.subCategories.length > 0 && (
         <div className="category-subnav-bar">
           <div className="category-subnav-container">
-            {categoryData.subCategories.map((sub, idx) => (
-              <a
-                key={idx}
-                href={`#${sub.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                className="category-subnav-link"
-                onClick={(e) => e.preventDefault()}
-              >
-                {sub}
-              </a>
-            ))}
+
+            {categoryData.subCategories.map((sub, idx) => {
+              // Превращаем "Podcast Categories" в "podcast-categories" (ключ для данных)
+              const subSlug = sub.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+              return (
+                <a
+                  key={idx}
+                  href={`#${subSlug}`}
+                  className={`category-subnav-link ${activeSub === subSlug ? 'active' : ''}`}
+                  onClick={(e) => {
+                    e.preventDefault(); // Предотвращаем перезагрузку
+                    setActiveSub(subSlug); // Меняем отображаемые данные
+                  }}
+                >
+                  {sub}
+                </a>
+              );
+            })}
           </div>
         </div>
       )}
 
       <div className="gbc-homepage">
-        {categoryData.sections.map((section, secIdx) => {
+        {/* Маппим сохраненные в currentSections данные */}
+        {currentSections && currentSections.map((section, secIdx) => {
           const { layout, data } = section;
 
           if (layout === 'newspaper') {
